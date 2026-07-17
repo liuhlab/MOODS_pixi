@@ -5,3 +5,21 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+
+# SWIG-generated wrappers (produced at build time, never committed)
+core/*_wrap.cxx
+/python/MOODS/scan.py
+/python/MOODS/tools.py
+/python/MOODS/parsers.py
+/python/MOODS/misc.py
+
+# in-place build.sh leftovers
+/python/core

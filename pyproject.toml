@@ -1,0 +1,27 @@
+[build-system]
+requires = ["scikit-build-core>=0.10", "swig>=4.0"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "MOODS-python"
+version = "1.9.4.1"
+description = "MOODS: Motif Occurrence Detection Suite"
+readme = { file = "python/readme.MD", content-type = "text/markdown" }
+requires-python = ">=3.7"
+license = { text = "GPLv3 / Biopython license" }
+maintainers = [
+    { name = "Janne H. Korhonen", email = "janne.h.korhonen@gmail.com" },
+]
+keywords = ["PWM", "PSSM", "motif scan"]
+classifiers = ["Topic :: Scientific/Engineering :: Bio-Informatics"]
+
+[project.urls]
+Homepage = "https://www.cs.helsinki.fi/group/pssmfind/"
+
+[tool.scikit-build]
+# Pin behaviour to a known scikit-build-core release series.
+minimum-version = "0.10"
+# The MOODS package is assembled entirely by CMake's install() rules, so turn
+# off scikit-build-core's pure-Python auto-discovery (there is no top-level
+# MOODS/ directory next to this file — it lives under python/).
+wheel.packages = []
